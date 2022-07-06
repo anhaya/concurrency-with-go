@@ -33,7 +33,7 @@ func selectWithLoop() {
 	go myNameFunc(myName, done)
 	go myPetNameFunc(myPetName, done)
 	go myCatNameFunc(myCatName, done)
-	for {
+	for { //if we do not have this for, its impossible to assert that "done" and "myCatName" cases would be executed
 		select {
 		case name := <-myName:
 			fmt.Println(name)
