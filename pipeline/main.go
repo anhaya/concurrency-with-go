@@ -60,7 +60,7 @@ func toUpperCase(strC <-chan []string) <-chan []string {
 }
 
 // Remove "invalid" organization/repository. Instead make an GitHub API request
-// Ill just remove if its an odd line, after 3 seconds
+// Ill just remove if its an odd line.
 func removeInvalid(strC <-chan []string) <-chan []string {
 	ch := make(chan []string)
 
