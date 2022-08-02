@@ -13,7 +13,7 @@ func main() {
 	recordsC := readFile("file.txt")
 
 	start := time.Now()
-	for val := range removeInvalid(toUpperCase(recordsC)) {
+	for val := range removeInvalid(toUpperCase(recordsC)) { //range only stops to receive when the channel is blocked.
 		fmt.Printf("%v\n", val)
 	}
 	fmt.Printf("done after %v", time.Since(start))
